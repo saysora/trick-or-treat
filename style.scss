@@ -1,0 +1,115 @@
+/**
+ Colors
+*/
+
+ $dark: #272525;
+ $base: #FF7518;
+ $win: #F6B132;
+ $normWin: #ffffff;
+ $barelyWin: #01AC20;
+ $notReallyWin: #43B7DF;
+ $loss: #C75D64;
+ $totalLoss: #844D99;
+ $dead: #B30000;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.app {
+  width: 100%;
+  max-width:100%;
+  min-height: 100%;
+
+  background: linear-gradient(to bottom, #42275a 0%, #734b6d 100%);
+  color: #fff;
+  font-family: 'Roboto Mono', monospace;
+
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr auto;
+}
+
+.center {
+  padding: 2rem;
+  width: 1280px;
+  max-width: 100%;
+  margin: 0 auto;
+
+  &.middle {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.title {
+  text-align: center;
+}
+
+
+.button-hold {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+
+  button {
+    background: $base;
+    color: $normWin;
+    border: none;
+    padding: 8px 12px;
+    font-size: 1.3rem;
+    cursor: pointer;
+
+  }
+}
+
+.prompt {
+
+  &.critwin {
+    color: $normWin;
+    background: $win;
+  }
+
+  &.win {
+    color: $normWin;
+    background: $barelyWin;
+  }
+
+  &.null {
+    background: $normWin;
+    color: #000;
+  }
+
+  &.single {
+    background: $notReallyWin;
+    color: $normWin;
+  }
+
+  &.lose {
+    color: $normWin;
+    background: $loss;
+  }
+
+  &.critlose {
+    color: $normWin;
+    background: $totalLoss;
+  }
+
+  &.gameover {
+    color: $normWin;
+    background: $dead;
+  }
+
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
